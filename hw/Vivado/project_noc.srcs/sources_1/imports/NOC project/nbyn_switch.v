@@ -95,7 +95,7 @@ begin
         o_data_r <=i_data_l;
 		  o_valid_r <=1'b1;
 	 end
-	 else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord)
+	 else if(i_ready_r & i_valid_b & i_data_b[1:0]!=x_coord)
 	 begin
         o_data_r <=i_data_b;
 		  o_valid_r <=1'b1;
@@ -115,6 +115,26 @@ begin
           o_data_r<=i_data_b;
           o_valid_r<=1'b1;		  
 	 end
+	 else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
+	 begin
+	    o_data_r<=i_data_b;
+		o_valid_r<=1'b1;
+	 end
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
+	 begin
+	    o_data_r<=i_data_l;
+		o_valid_r<=1'b1;
+	 end
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+	 begin
+	    o_data_r<=i_data_pe;
+		o_valid_r<=1'b1;
+	 end
+    else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+	 begin
+	    o_data_r<=i_data_pe;
+		o_valid_r<=1'b1;
+	 end
 	 else
 	    o_valid_r <=1'b0;
 end
@@ -131,7 +151,7 @@ begin
         o_data_t <=i_data_b;
 		  o_valid_t <=1'b1;
 	 end	 
-	 else if(i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2] != y_coord)
+	 else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2] != y_coord)
 	 begin
 	     o_data_t <=i_data_l;
 		  o_valid_t <=1'b1;
@@ -141,11 +161,31 @@ begin
           o_data_t <=i_data_b;
 		    o_valid_t <=1'b1;
 	 end
-	 else if(o_ready_pe & i_valid_pe & i_data_pe[1:0]==x_coord)
+	else if(o_ready_pe & i_valid_pe & i_data_pe[1:0]==x_coord )
     begin
           o_data_t <=i_data_pe;
 		    o_valid_t <=1'b1;
 	 end
+	else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
+	  begin
+	    o_data_t<=i_data_pe;
+		o_valid_t<=1'b1;
+	  end
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
+	 begin
+	    o_data_t<=i_data_pe;
+		o_valid_t<=1'b1;
+	 end
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+	 begin
+	    o_data_t<=i_data_l;
+		o_valid_t<=1'b1;
+	 end
+    else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+	 begin
+	    o_data_t<=i_data_b;
+		o_valid_t<=1'b1;
+	 end	 
 	 else
 	      o_valid_t <=1'b0;
 end

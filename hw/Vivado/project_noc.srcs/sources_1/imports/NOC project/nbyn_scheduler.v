@@ -18,7 +18,7 @@ input [264:0] i_data_pe
 
 );
 reg [1:0] x_coord = 'd0;
-reg [1:0] y_coord = 'd0;
+reg [1:0] y_coord = 'd1;
 reg [4:0] pck_no = 'd0;
 reg [4:0] counter = 'd0;
 reg [4:0] addr_counter = 'd0;
@@ -49,7 +49,7 @@ begin
 	  if(y_coord < 3)
 	   begin
 	     y_coord<=y_coord+1;
-		if(pck_no < 'd30)
+		if(pck_no < 'd31)
 		 begin
 		   pck_no<=pck_no+1;
 	     end
@@ -144,7 +144,7 @@ begin
 	o_valid_pci<=1'b1;
 	addrb<= addr_counter;
 	counter<=counter-1;
-	if(addr_counter<=30)
+	if(addr_counter<31)
 	addr_counter<=addr_counter+1;
 	else
 	addr_counter<='d0;

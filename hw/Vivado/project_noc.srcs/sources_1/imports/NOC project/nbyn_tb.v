@@ -76,7 +76,7 @@ tb_i_valid_pci=1'b0;
 end
 
 
-
+/*
 
 
 nbyn_full DUT(
@@ -91,7 +91,7 @@ nbyn_full DUT(
 .o_data_pci(tb_o_data_pci),
 .o_valid_pci(tb_o_valid_pci),
 .i_ready_pci(tb_i_ready_pci)
-);
+);*/
 
 
 

@@ -72,7 +72,9 @@ begin
 			 main_output <=i_data;
 			 o_valid_scheduler<=1'b1;
 			 //l_valid <= 1'b1;
-      end
+       end
+	   else
+	    o_valid_scheduler<=1'b0;
 	   
 end
 
