@@ -1,0 +1,30 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port sys_clk_n -pg 1 -y 170 -defaultsOSRD
+preplace port sys_clk_p -pg 1 -y 150 -defaultsOSRD
+preplace port heartbeat -pg 1 -y 170 -defaultsOSRD
+preplace port pcie_link_status -pg 1 -y 150 -defaultsOSRD
+preplace port sys_reset_n -pg 1 -y 190 -defaultsOSRD
+preplace portBus pci_exp_rxn -pg 1 -y 130 -defaultsOSRD
+preplace portBus pci_exp_rxp -pg 1 -y 110 -defaultsOSRD
+preplace portBus pci_exp_txn -pg 1 -y 110 -defaultsOSRD
+preplace portBus pci_exp_txp -pg 1 -y 90 -defaultsOSRD
+preplace inst dyract_0 -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst myNoc_0 -pg 1 -lvl 1 -y 70 -defaultsOSRD
+preplace netloc dyract_0_pci_exp_txn 1 2 1 NJ
+preplace netloc pci_exp_rxn_1 1 0 2 NJ 130 NJ
+preplace netloc myNoc_0_nocMaster 1 1 1 N
+preplace netloc sys_clk_p_1 1 0 2 NJ 150 NJ
+preplace netloc dyract_0_Stream_Wr 1 0 3 20 10 NJ 10 560
+preplace netloc dyract_0_pci_exp_txp 1 2 1 NJ
+preplace netloc dyract_0_pcie_link_status 1 2 1 NJ
+preplace netloc sys_clk_n_1 1 0 2 NJ 170 NJ
+preplace netloc pci_exp_rxp_1 1 0 2 NJ 140 NJ
+preplace netloc dyract_0_o_axi_strm_clk 1 0 3 20 220 NJ 220 560
+preplace netloc sys_reset_n_1 1 0 2 NJ 190 NJ
+preplace netloc dyract_0_heartbeat 1 2 1 NJ
+levelinfo -pg 1 -10 140 430 590 -top 0 -bot 230
+",
+}
+0

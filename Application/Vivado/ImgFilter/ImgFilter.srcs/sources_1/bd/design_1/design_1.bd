@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:synthFlowMode="None" bd:tool_version="2015.4" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.SYS_CLK_N</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>sys_clk_n</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters/>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>CLK.SYS_CLK_P</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>sys_clk_p</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>pcie_link_status</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>heartbeat</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sys_clk_n</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sys_clk_p</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sys_reset_n</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pci_exp_rxn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pci_exp_rxp</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pci_exp_txp</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>pci_exp_txn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>myNoc_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="myNoc" spirit:vendor="kulInc" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_myNoc_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>dyract_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="dyract" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_dyract_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections>
+      <spirit:interconnection>
+        <spirit:name>dyract_0_Stream_Wr</spirit:name>
+        <spirit:activeInterface spirit:busRef="Stream_Wr" spirit:componentRef="dyract_0"/>
+        <spirit:activeInterface spirit:busRef="nocSlave" spirit:componentRef="myNoc_0"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="DEBUG_IN_BD" bd:value="true"/>
+        </bd:hdl_attributes>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>myNoc_0_nocMaster</spirit:name>
+        <spirit:activeInterface spirit:busRef="Stream_Rd" spirit:componentRef="dyract_0"/>
+        <spirit:activeInterface spirit:busRef="nocMaster" spirit:componentRef="myNoc_0"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="DEBUG_IN_BD" bd:value="true"/>
+        </bd:hdl_attributes>
+      </spirit:interconnection>
+    </spirit:interconnections>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>dyract_0_pcie_link_status</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="pcie_link_status"/>
+        <spirit:externalPortReference spirit:portRef="pcie_link_status"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dyract_0_heartbeat</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="heartbeat"/>
+        <spirit:externalPortReference spirit:portRef="heartbeat"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sys_clk_n_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="sys_clk_n"/>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="sys_clk_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sys_clk_p_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="sys_clk_p"/>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="sys_clk_p"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sys_reset_n_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="sys_reset_n"/>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="sys_reset_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pci_exp_rxn_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="pci_exp_rxn"/>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="pci_exp_rxn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pci_exp_rxp_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="pci_exp_rxp"/>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="pci_exp_rxp"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dyract_0_pci_exp_txp</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="pci_exp_txp"/>
+        <spirit:externalPortReference spirit:portRef="pci_exp_txp"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dyract_0_pci_exp_txn</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="pci_exp_txn"/>
+        <spirit:externalPortReference spirit:portRef="pci_exp_txn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dyract_0_o_axi_strm_clk</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dyract_0" spirit:portRef="o_axi_strm_clk"/>
+        <spirit:internalPortReference spirit:componentRef="myNoc_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>
