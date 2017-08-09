@@ -1,4 +1,4 @@
-module nbyn_block #(parameter x_coord='d0,parameter y_coord='d0)
+module nbyn_block #(parameter x_coord=2'd0,parameter y_coord=2'd0)
 (
 input wire clk,
 input wire i_ready_r,

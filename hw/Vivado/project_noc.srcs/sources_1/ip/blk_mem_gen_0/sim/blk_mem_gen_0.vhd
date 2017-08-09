@@ -61,10 +61,11 @@ ENTITY blk_mem_gen_0 IS
     clka : IN STD_LOGIC;
     wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     addra : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    dina : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
+    dina : IN STD_LOGIC_VECTOR(256 DOWNTO 0);
     clkb : IN STD_LOGIC;
+    enb : IN STD_LOGIC;
     addrb : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    doutb : OUT STD_LOGIC_VECTOR(255 DOWNTO 0)
+    doutb : OUT STD_LOGIC_VECTOR(256 DOWNTO 0)
   );
 END blk_mem_gen_0;
 
@@ -155,16 +156,16 @@ ARCHITECTURE blk_mem_gen_0_arch OF blk_mem_gen_0 IS
       regcea : IN STD_LOGIC;
       wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       addra : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-      dina : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
-      douta : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
+      dina : IN STD_LOGIC_VECTOR(256 DOWNTO 0);
+      douta : OUT STD_LOGIC_VECTOR(256 DOWNTO 0);
       clkb : IN STD_LOGIC;
       rstb : IN STD_LOGIC;
       enb : IN STD_LOGIC;
       regceb : IN STD_LOGIC;
       web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       addrb : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-      dinb : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
-      doutb : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
+      dinb : IN STD_LOGIC_VECTOR(256 DOWNTO 0);
+      doutb : OUT STD_LOGIC_VECTOR(256 DOWNTO 0);
       injectsbiterr : IN STD_LOGIC;
       injectdbiterr : IN STD_LOGIC;
       eccpipece : IN STD_LOGIC;
@@ -185,7 +186,7 @@ ARCHITECTURE blk_mem_gen_0_arch OF blk_mem_gen_0 IS
       s_axi_awburst : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_awvalid : IN STD_LOGIC;
       s_axi_awready : OUT STD_LOGIC;
-      s_axi_wdata : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
+      s_axi_wdata : IN STD_LOGIC_VECTOR(256 DOWNTO 0);
       s_axi_wstrb : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
       s_axi_wlast : IN STD_LOGIC;
       s_axi_wvalid : IN STD_LOGIC;
@@ -202,7 +203,7 @@ ARCHITECTURE blk_mem_gen_0_arch OF blk_mem_gen_0 IS
       s_axi_arvalid : IN STD_LOGIC;
       s_axi_arready : OUT STD_LOGIC;
       s_axi_rid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      s_axi_rdata : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
+      s_axi_rdata : OUT STD_LOGIC_VECTOR(256 DOWNTO 0);
       s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       s_axi_rlast : OUT STD_LOGIC;
       s_axi_rvalid : OUT STD_LOGIC;
@@ -220,6 +221,7 @@ ARCHITECTURE blk_mem_gen_0_arch OF blk_mem_gen_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF addra: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   ATTRIBUTE X_INTERFACE_INFO OF dina: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN";
   ATTRIBUTE X_INTERFACE_INFO OF clkb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF enb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
   ATTRIBUTE X_INTERFACE_INFO OF addrb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
   ATTRIBUTE X_INTERFACE_INFO OF doutb: SIGNAL IS "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT";
 BEGIN
@@ -253,9 +255,9 @@ BEGIN
       C_HAS_REGCEA => 0,
       C_USE_BYTE_WEA => 0,
       C_WEA_WIDTH => 1,
-      C_WRITE_MODE_A => "READ_FIRST",
-      C_WRITE_WIDTH_A => 256,
-      C_READ_WIDTH_A => 256,
+      C_WRITE_MODE_A => "NO_CHANGE",
+      C_WRITE_WIDTH_A => 257,
+      C_READ_WIDTH_A => 257,
       C_WRITE_DEPTH_A => 32,
       C_READ_DEPTH_A => 32,
       C_ADDRA_WIDTH => 5,
@@ -263,13 +265,13 @@ BEGIN
       C_RST_PRIORITY_B => "CE",
       C_RSTRAM_B => 0,
       C_INITB_VAL => "0",
-      C_HAS_ENB => 0,
+      C_HAS_ENB => 1,
       C_HAS_REGCEB => 0,
       C_USE_BYTE_WEB => 0,
       C_WEB_WIDTH => 1,
       C_WRITE_MODE_B => "READ_FIRST",
-      C_WRITE_WIDTH_B => 256,
-      C_READ_WIDTH_B => 256,
+      C_WRITE_WIDTH_B => 257,
+      C_READ_WIDTH_B => 257,
       C_WRITE_DEPTH_B => 32,
       C_READ_DEPTH_B => 32,
       C_ADDRB_WIDTH => 5,
@@ -297,7 +299,7 @@ BEGIN
       C_DISABLE_WARN_BHV_RANGE => 0,
       C_COUNT_36K_BRAM => "4",
       C_COUNT_18K_BRAM => "0",
-      C_EST_POWER_SUMMARY => "Estimated Power for IP     :     29.4257 mW"
+      C_EST_POWER_SUMMARY => "Estimated Power for IP     :     27.8996 mW"
     )
     PORT MAP (
       clka => clka,
@@ -309,11 +311,11 @@ BEGIN
       dina => dina,
       clkb => clkb,
       rstb => '0',
-      enb => '0',
+      enb => enb,
       regceb => '0',
       web => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       addrb => addrb,
-      dinb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 256)),
+      dinb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 257)),
       doutb => doutb,
       injectsbiterr => '0',
       injectdbiterr => '0',
@@ -329,7 +331,7 @@ BEGIN
       s_axi_awsize => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 3)),
       s_axi_awburst => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 2)),
       s_axi_awvalid => '0',
-      s_axi_wdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 256)),
+      s_axi_wdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 257)),
       s_axi_wstrb => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axi_wlast => '0',
       s_axi_wvalid => '0',

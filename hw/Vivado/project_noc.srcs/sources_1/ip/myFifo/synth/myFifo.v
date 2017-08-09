@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axis_data_fifo_v1_1_8_axis_data_fifo,Vivado 2015.4" *)
 (* CHECK_LICENSE_TYPE = "myFifo,axis_data_fifo_v1_1_8_axis_data_fifo,{}" *)
-(* CORE_GENERATION_INFO = "myFifo,axis_data_fifo_v1_1_8_axis_data_fifo,{x_ipProduct=Vivado 2015.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=1.1,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=virtex7,C_AXIS_TDATA_WIDTH=272,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000000011,C_FIFO_DEPTH=1024,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=2,C_ACLKEN_CONV_MODE=0}" *)
+(* CORE_GENERATION_INFO = "myFifo,axis_data_fifo_v1_1_8_axis_data_fifo,{x_ipProduct=Vivado 2015.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=1.1,x_ipCoreRevision=8,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=virtex7,C_AXIS_TDATA_WIDTH=272,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000000011,C_FIFO_DEPTH=4096,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=2,C_ACLKEN_CONV_MODE=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module myFifo (
   s_axis_aresetn,
@@ -95,7 +95,7 @@ output wire [31 : 0] axis_rd_data_count;
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
     .C_AXIS_SIGNAL_SET('B00000000000000000000000000000011),
-    .C_FIFO_DEPTH(1024),
+    .C_FIFO_DEPTH(4096),
     .C_FIFO_MODE(1),
     .C_IS_ACLK_ASYNC(0),
     .C_SYNCHRONIZER_STAGE(2),

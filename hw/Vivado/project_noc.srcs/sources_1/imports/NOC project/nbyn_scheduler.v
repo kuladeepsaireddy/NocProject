@@ -15,25 +15,35 @@ output reg [264:0] o_data,
 //from NOC to Schedler
 input wea,
 input [264:0] i_data_pe
-
+//output o_ready_pe
 );
-reg [1:0] x_coord = 'd0;
-reg [1:0] y_coord = 'd1;
-reg [4:0] pck_no = 'd0;
-reg [4:0] counter = 'd0;
-reg [4:0] addr_counter = 'd0;
+
+reg [1:0] x_coord;
+reg [1:0] y_coord;
+reg [4:0] pck_no;
+reg [4:0] counter;
+reg [4:0] addr_counter;
 reg counter_valid;
 reg [4 : 0] addra;
 reg [4 : 0] addrb;
-reg [255 : 0] dina;
+reg [256 : 0] dina;
 wire  [255 : 0] doutb;
+wire valid_flag;
+reg enb;
 
 
+reg [256:0] my_mem [16:0];
 
-
-
-
-
+initial
+begin
+  x_coord = 'd0;
+  y_coord = 'd1;
+  pck_no = 'd0;
+  counter = 'd0;
+  addr_counter = 'd0;
+  addrb<='hz;
+  rd_addr<='d0;
+end
 
 
 always @(posedge clk)
@@ -49,7 +59,7 @@ begin
 	  if(y_coord < 3)
 	   begin
 	     y_coord<=y_coord+1;
-		if(pck_no < 'd31)
+		if(pck_no < 'd15)
 		 begin
 		   pck_no<=pck_no+1;
 	     end
@@ -65,13 +75,27 @@ begin
 		  begin
       	    x_coord <= x_coord+1;
 			y_coord<='b0;
-			pck_no<=pck_no+1;
+			if(pck_no < 'd15)
+			 begin
+			   pck_no<=pck_no+1;
+			 end 
+            else
+              begin
+               pck_no<= 'd0;
+              end			  
 		  end
 		else
 		  begin
 			x_coord <= 'd0;
 			y_coord <= 'd1;
-            pck_no <= pck_no+1;
+            if(pck_no < 'd15)
+			 begin
+			   pck_no<=pck_no+1;
+			 end 
+            else
+              begin
+               pck_no<= 'd0;
+              end			;
 		  end
 	  end	  
 	 /* if(x_coord !>3)
@@ -124,6 +148,50 @@ begin
 
 end
 
+reg [4:0]rd_addr;
+wire [4:0] wr_addr;
+
+assign valid_flag = my_mem[rd_addr][256];
+assign wr_addr = i_data_pe[8:4];
+
+always@(posedge clk)
+ begin
+  if(wea)
+  begin 
+	 //wr_addr = i_data_pe[8:4];
+	 my_mem[wr_addr]<=i_data_pe[264:9];
+	 my_mem[wr_addr][256]<=1'b1;
+  end
+  if(valid_flag & i_ready_pci )
+  begin
+     my_mem[rd_addr][256]<=1'b0;
+  end       
+ end
+
+always@(posedge clk)
+ begin
+  if(valid_flag & i_ready_pci )
+   begin
+     o_data_pci <=my_mem[rd_addr];
+	 o_valid_pci<=1'b1;
+	 
+   if(rd_addr<15)
+     begin
+	  rd_addr<=rd_addr+1;
+	 end 
+   else
+     begin
+	  rd_addr<='d0;
+     end
+	 
+   end
+  else 
+   begin
+     o_valid_pci<=1'b0;
+   end   
+ end
+ 
+/*
 always@(posedge clk)
 begin
  if(wea)
@@ -131,8 +199,15 @@ begin
   addra<= i_data_pe[8:4];
   dina<= i_data_pe[264:9];
   counter<= counter +1;
-  if(counter == 'd15)
+  if(counter >'d15)
+   begin
     counter_valid<=1'b1;
+   end
+   
+  else
+    begin
+	  counter_valid<=1'b0;
+	end
   end
 end
 
@@ -141,9 +216,14 @@ begin
  if(counter_valid & i_ready_pci)
   begin
     o_data_pci<=doutb;
-	o_valid_pci<=1'b1;
+	
+	enb<=1'b1;
 	addrb<= addr_counter;
 	counter<=counter-1;
+	if(addrb == 2)
+	 begin
+	   o_valid_pci<=1'b1;
+	 end
 	if(addr_counter<31)
 	addr_counter<=addr_counter+1;
 	else
@@ -153,17 +233,21 @@ begin
  else
    o_valid_pci<=1'b0;
 end
+*/
 
 
+/*
 blk_mem_gen_0 sch_ram(
   .clka(clk),    // input wire clka
   .wea(wea),      // input wire [0 : 0] wea
   .addra(addra),  // input wire [4 : 0] addra
-  .dina(dina),    // input wire [255 : 0] dina
+  .dina(dina),    // input wire [256 : 0] dina
   .clkb(clk),    // input wire clkb
+  .enb(enb),      // input wire enb
   .addrb(addrb),  // input wire [4 : 0] addrb
-  .doutb(doutb)  // output wire [255 : 0] doutb
+  .doutb(doutb)  // output wire [256 : 0] doutb
 );
+*/
 
 /*sch_ram sch_ram (
   .clka(clk), // input clka

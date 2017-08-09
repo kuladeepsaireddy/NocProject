@@ -1,4 +1,4 @@
-module nbyn #(parameter x_coord =4'd0,parameter y_coord=4'd0) //parameter pck_no=16'd0)
+module nbyn #(parameter x_coord =2'd0,parameter y_coord=2'd0) //parameter pck_no=16'd0)
 (
 input wire clk,
 input wire i_ready_r,
@@ -9,7 +9,7 @@ input wire i_valid_b,
 input wire i_valid_pe,
 output wire o_ready_l,
 output wire o_ready_b,
-output reg o_ready_pe,
+output wire  o_ready_pe,
 output reg o_valid_r,
 output reg o_valid_t,
 output reg o_valid_pe,
@@ -31,6 +31,10 @@ begin
 	o_valid_t <= 1'b0;
 end
 
+
+assign o_ready_pe = !(i_valid_b & i_valid_l);
+
+//assign o_ready_pe = ((i_valid_b & i_valid_l) ==1)? 0 : 1;
 //Block to control o_data_r
 
 /*always @(posedge clk)
@@ -99,38 +103,44 @@ begin
 	 begin
         o_data_r <=i_data_b;
 		  o_valid_r <=1'b1;
-	 end	 
-	 else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_data_l[3:2]!=y_coord)
+	 end
+     else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_l & i_data_l[1:0]!=x_coord)// both going to right     
 	 begin
-	     o_data_r <=i_data_l;
+        o_data_r <=i_data_l;
+		  o_valid_r <=1'b1;	
+     end		  
+	 else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_data_l[3:2]!=y_coord) //both going to top
+	 begin
+	     o_data_r <=i_data_b;
 		  o_valid_r <=1'b1;
 	 end
-    else if(o_ready_pe & i_valid_pe & i_data_pe[1:0]!=x_coord)
-    begin
-          o_data_r <=i_data_pe;
-		    o_valid_r <=1'b1;
-	 end
-	 else if(i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]==y_coord & i_data_l[3:2]==y_coord)
+    
+	 else if(i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]==y_coord & i_data_l[3:2]==y_coord)//both going to pe
 	 begin
           o_data_r<=i_data_b;
           o_valid_r<=1'b1;		  
 	 end
-	 else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
+	 else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)////// pe and bottom going to right
 	 begin
 	    o_data_r<=i_data_b;
 		o_valid_r<=1'b1;
 	 end
-    else if(i_ready_t & i_valid_l & i_data_l[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////pe and left going to right
 	 begin
 	    o_data_r<=i_data_l;
 		o_valid_r<=1'b1;
 	 end
-    else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+   else if(o_ready_pe & i_valid_pe & i_data_pe[1:0]!=x_coord)
+    begin
+          o_data_r <=i_data_pe;
+		    o_valid_r <=1'b1;
+	 end
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)////// left and pe going to top
 	 begin
 	    o_data_r<=i_data_pe;
 		o_valid_r<=1'b1;
 	 end
-    else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+    else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////bottom and pe going to top
 	 begin
 	    o_data_r<=i_data_pe;
 		o_valid_r<=1'b1;
@@ -141,14 +151,14 @@ end
 
 always @(posedge clk)
 begin
-    if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_l & i_data_l[1:0]!=x_coord)     
+    if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_l & i_data_l[1:0]!=x_coord)// both going to right     
 	 begin
         o_data_t <=i_data_b;
 		  o_valid_t <=1'b1;
 	 end
-	 else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_data_l[3:2]!=y_coord)
+	 else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_data_l[3:2]!=y_coord)//both going to top
 	 begin
-        o_data_t <=i_data_b;
+        o_data_t <=i_data_l;
 		  o_valid_t <=1'b1;
 	 end	 
 	 else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2] != y_coord)
@@ -161,29 +171,30 @@ begin
           o_data_t <=i_data_b;
 		    o_valid_t <=1'b1;
 	 end
-	else if(o_ready_pe & i_valid_pe & i_data_pe[1:0]==x_coord )
-    begin
-          o_data_t <=i_data_pe;
-		    o_valid_t <=1'b1;
-	 end
-	else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
-	  begin
-	    o_data_t<=i_data_pe;
-		o_valid_t<=1'b1;
-	  end
-    else if(i_ready_t & i_valid_l & i_data_l[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)//////
-	 begin
-	    o_data_t<=i_data_pe;
-		o_valid_t<=1'b1;
-	 end
-    else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+  
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//left and pe going to top
 	 begin
 	    o_data_t<=i_data_l;
 		o_valid_t<=1'b1;
 	 end
-    else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//////
+    else if(i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]!=y_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]==x_coord & i_data_pe[3:2]!=y_coord)//bottom and pe going to top
 	 begin
 	    o_data_t<=i_data_b;
+		o_valid_t<=1'b1;
+	 end
+   	else if(o_ready_pe & i_valid_pe & i_data_pe[1:0]==x_coord )
+    begin
+          o_data_t <=i_data_pe;
+		    o_valid_t <=1'b1;
+	 end
+	else if(i_ready_t & i_valid_b & i_data_b[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)///bottom and pe going to right
+	  begin
+	    o_data_t<=i_data_pe;
+		o_valid_t<=1'b1;
+	  end
+    else if(i_ready_t & i_valid_l & i_data_l[1:0]!=x_coord & i_ready_r & i_valid_pe & i_data_pe[1:0]!=x_coord)// left and pe going to right 
+	 begin
+	    o_data_t<=i_data_pe;
 		o_valid_t<=1'b1;
 	 end	 
 	 else
@@ -192,6 +203,7 @@ end
 
 
 
+/*
 always @(posedge clk)
 begin
      if(i_valid_b & i_valid_l)
@@ -199,21 +211,24 @@ begin
 	  else
 	      o_ready_pe <= 1'b1;
 end
-
+*/
 
 always @(posedge clk)
 begin
-     if(i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2] == y_coord)
+     	
+	if(i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2] == y_coord  )
+	  begin
+	       o_data_pe <=i_data_l;
+		    o_valid_pe <=1'b1;
+      end
+	  
+	 else if(i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2] == y_coord)
 	  begin
 	       o_data_pe <=i_data_b;
 		    o_valid_pe <=1'b1;
      end
-	  else if(i_valid_l & i_data_l[1:0]==x_coord & i_data_l[3:2] == y_coord)
-	  begin
-	       o_data_pe <=i_data_l;
-		    o_valid_pe <=1'b1;
-     end
-	 else if(i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]==y_coord & i_data_l[3:2]==y_coord)
+
+	 else if(i_ready_r & i_valid_l & i_data_l[1:0]==x_coord & i_ready_t & i_valid_b & i_data_b[1:0]==x_coord & i_data_b[3:2]==y_coord & i_data_l[3:2]==y_coord)//both going to pe 
 	 begin
           o_data_pe<=i_data_l;
           o_valid_pe<=1'b1;		  

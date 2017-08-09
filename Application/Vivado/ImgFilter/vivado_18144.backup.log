@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Aug 10 01:41:36 2017
+# Process ID: 18144
+# Current directory: D:/mygit/NocProject/Application/Vivado/ImgFilter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16068 D:\mygit\NocProject\Application\Vivado\ImgFilter\ImgFilter.xpr
+# Log file: D:/mygit/NocProject/Application/Vivado/ImgFilter/vivado.log
+# Journal file: D:/mygit/NocProject/Application/Vivado/ImgFilter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.xpr
+INFO: [Project 1-313] Project file moved from 'G:/mygit/NocProject/Application/Vivado/ImgFilter' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.ip_user_files', nor could it be found using path 'G:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.ip_user_files'.
+WARNING: [filemgmt 56-2] IPStaticSourceDir: Could not find the directory 'D:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.ip_user_files/ipstatic', nor could it be found using path 'G:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/mygit/NocProject/dyract/dyract.srcs'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/mygit/NocProject/hw/Vivado/project_noc.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 745.781 ; gain = 171.773
+open_bd_design {D:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- kulInc:user:myNoc:1.0 - myNoc_0
+Adding component instance block -- xilinx.com:user:dyract:1.0 - dyract_0
+Successfully read diagram <design_1> from BD file <D:/mygit/NocProject/Application/Vivado/ImgFilter/ImgFilter.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 883.574 ; gain = 60.387
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 10 01:42:47 2017...

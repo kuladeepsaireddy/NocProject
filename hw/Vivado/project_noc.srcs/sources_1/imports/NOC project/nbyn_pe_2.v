@@ -17,7 +17,7 @@ if(i_valid)
 	for(x=2;x<34;x=x+1)
 	  begin
 	   // o_data[264:9] <= 'd255 - i_data[264:9];
-	   o_data[x*8-:8]<='d255-i_data[x*8-:8];
+	   o_data[x*8-:8]<=8'hff-i_data[x*8-:8];
 	  end
 	 o_data[3:0] <= 'h0;
 	 o_data[8:4]<=i_data[8:4];
