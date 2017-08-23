@@ -1,0 +1,568 @@
+
+*** Running vivado
+    with args -log nbyn_full.vds -m64 -mode batch -messageDb vivado.pb -notrace -source nbyn_full.tcl
+
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source nbyn_full.tcl -notrace
+Command: synth_design -top nbyn_full -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 281.699 ; gain = 109.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'nbyn_full' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_full.v:3]
+INFO: [Synth 8-638] synthesizing module 'nbyn' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized0' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized0' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized1' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized1' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized2' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized2' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized3' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized3' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized4' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized4' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized5' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized5' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized6' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized6' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized7' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized7' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized8' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized8' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized9' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized9' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized10' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized10' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized11' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized11' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized12' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized12' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized13' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized13' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized14' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized14' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:4]
+INFO: [Synth 8-256] done synthesizing module 'nbyn_full' (2#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_full.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 357.297 ; gain = 185.484
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 357.297 ; gain = 185.484
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/constrs_1/new/noc.xdc]
+Finished Parsing XDC File [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/constrs_1/new/noc.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.243 . Memory (MB): peak = 889.801 ; gain = 3.781
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     52140|
+|2     |nbyn_full__GB1 |           1|     26084|
+|3     |nbyn_full__GB2 |           1|     39105|
+|4     |nbyn_full__GB3 |           1|     39117|
+|5     |nbyn_full__GB4 |           1|     52146|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 48    
+	                1 Bit    Registers := 48    
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 16    
+	   2 Input    264 Bit        Muxes := 32    
+	   9 Input      1 Bit        Muxes := 32    
+	   8 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 48    
+	  10 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module nbyn__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	              264 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input    264 Bit        Muxes := 1     
+	   2 Input    264 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:57 ; elapsed = 00:01:26 . Memory (MB): peak = 889.801 ; gain = 717.988
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     55295|
+|2     |nbyn_full__GB1 |           1|     27650|
+|3     |nbyn_full__GB2 |           1|     41476|
+|4     |nbyn_full__GB3 |           1|     41477|
+|5     |nbyn_full__GB4 |           1|     55302|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:02:21 ; elapsed = 00:03:08 . Memory (MB): peak = 889.801 ; gain = 717.988
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:02:21 ; elapsed = 00:03:08 . Memory (MB): peak = 889.801 ; gain = 717.988
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     13521|
+|2     |nbyn_full__GB1 |           1|      6762|
+|3     |nbyn_full__GB2 |           1|     11379|
+|4     |nbyn_full__GB3 |           1|     10560|
+|5     |nbyn_full__GB4 |           1|     12697|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:38 ; elapsed = 00:03:25 . Memory (MB): peak = 1015.605 ; gain = 843.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:15 ; elapsed = 00:04:02 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     13497|
+|2     |nbyn_full__GB1 |           1|      6746|
+|3     |nbyn_full_GT0  |           1|     34463|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:32 ; elapsed = 00:04:20 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:03:32 ; elapsed = 00:04:20 . Memory (MB): peak = 1109.438 ; gain = 937.625
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:03:32 ; elapsed = 00:04:20 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:36 ; elapsed = 00:04:24 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:37 ; elapsed = 00:04:24 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:41 ; elapsed = 00:04:29 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:41 ; elapsed = 00:04:29 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:44 ; elapsed = 00:04:32 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:44 ; elapsed = 00:04:32 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |   108|
+|3     |LUT3 |  4274|
+|4     |LUT4 |    57|
+|5     |LUT5 |  1962|
+|6     |LUT6 |  6802|
+|7     |FDRE | 12716|
+|8     |FDSE |     4|
+|9     |IBUF |  4241|
+|10    |OBUF |  4256|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+----------------------+------+
+|      |Instance                                   |Module                |Cells |
++------+-------------------------------------------+----------------------+------+
+|1     |top                                        |                      | 34421|
+|2     |  \xs[0].ys[0].instnce.nbyn_main_instance  |nbyn                  |  2418|
+|3     |  \xs[0].ys[1].instnce.nbyn_instance       |nbyn__parameterized0  |  1611|
+|4     |  \xs[0].ys[2].instnce.nbyn_instance       |nbyn__parameterized1  |  1631|
+|5     |  \xs[0].ys[3].instnce.nbyn_instance       |nbyn__parameterized2  |  1631|
+|6     |  \xs[1].ys[0].instnce.nbyn_instance       |nbyn__parameterized3  |  2418|
+|7     |  \xs[1].ys[1].instnce.nbyn_instance       |nbyn__parameterized4  |  1089|
+|8     |  \xs[1].ys[2].instnce.nbyn_instance       |nbyn__parameterized5  |  1084|
+|9     |  \xs[1].ys[3].instnce.nbyn_instance       |nbyn__parameterized6  |  1088|
+|10    |  \xs[2].ys[0].instnce.nbyn_instance       |nbyn__parameterized7  |  1614|
+|11    |  \xs[2].ys[1].instnce.nbyn_instance       |nbyn__parameterized8  |  1884|
+|12    |  \xs[2].ys[2].instnce.nbyn_instance       |nbyn__parameterized9  |  1613|
+|13    |  \xs[2].ys[3].instnce.nbyn_instance       |nbyn__parameterized10 |  1350|
+|14    |  \xs[3].ys[0].instnce.nbyn_instance       |nbyn__parameterized11 |  1894|
+|15    |  \xs[3].ys[1].instnce.nbyn_instance       |nbyn__parameterized12 |  1352|
+|16    |  \xs[3].ys[2].instnce.nbyn_instance       |nbyn__parameterized13 |  1088|
+|17    |  \xs[3].ys[3].instnce.nbyn_instance       |nbyn__parameterized14 |  2158|
++------+-------------------------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:44 ; elapsed = 00:04:32 . Memory (MB): peak = 1109.438 ; gain = 937.625
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:06 ; elapsed = 00:04:01 . Memory (MB): peak = 1109.438 ; gain = 365.457
+Synthesis Optimization Complete : Time (s): cpu = 00:03:45 ; elapsed = 00:04:33 . Memory (MB): peak = 1109.438 ; gain = 937.625
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4241 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:56 ; elapsed = 00:04:41 . Memory (MB): peak = 1109.438 ; gain = 911.078
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1109.438 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.309 . Memory (MB): peak = 1109.438 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 22 01:20:40 2017...

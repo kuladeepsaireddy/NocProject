@@ -1,5 +1,6 @@
 `include "../../../../include_file.v"
 
+//synth_design -name synth_1 -part xc7vx690tffg1761-2 -mode out_of_context -constrset constrs_1 -top nbyn_full
 
 module nbyn #(parameter x_coord ='d0,parameter y_coord='d0) //parameter pck_no=16'd0)
 (

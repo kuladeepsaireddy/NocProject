@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Wed Aug 23 01:59:37 2017
+# Process ID: 9144
+# Current directory: d:/mygit/NocProject/hw/Vivado
+# Command line: vivado.exe -mode tcl -source build.tcl
+# Log file: d:/mygit/NocProject/hw/Vivado/vivado.log
+# Journal file: d:/mygit/NocProject/hw/Vivado\vivado.jou
+#-----------------------------------------------------------
+source build.tcl
+exitexi
