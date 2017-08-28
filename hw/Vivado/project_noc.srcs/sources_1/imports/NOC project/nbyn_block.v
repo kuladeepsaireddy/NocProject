@@ -1,4 +1,6 @@
-module nbyn_block_main #(parameter x_coord=2'd0,parameter y_coord=2'd0)
+`include "../../../../include_file.v"
+
+module nbyn_block_main #(parameter x_coord='d0,parameter y_coord='d0)
 (
 input wire clk,
 input wire i_ready_r,
@@ -9,10 +11,10 @@ output wire o_ready_l,
 output wire o_ready_b,
 output wire o_valid_r,
 output wire o_valid_t,
-input wire [264:0] i_data_l,
-input wire [264:0] i_data_b,
-output wire [264:0] o_data_r,
-output wire [264:0] o_data_t,
+input wire [`total_width-1:0] i_data_l,
+input wire [`total_width-1:0] i_data_b,
+output wire [`total_width-1:0] o_data_r,
+output wire [`total_width-1:0] o_data_t,
 ////input wire [264:0] main_input,
 ////output wire [264:0] main_output,
 ////output o_ready_scheduler,
@@ -21,18 +23,18 @@ output wire [264:0] o_data_t,
 
 
 input i_valid_pci,
-input wire [255:0] i_data_pci,
+input wire [`data_width-1:0] i_data_pci,
 output o_ready_pci,
 
 ///From scheduler to PCI///
 
-output wire [255:0] o_data_pci,
+output wire [`data_width-1:0] o_data_pci,
 output o_valid_pci,
 input  i_ready_pci
 
 );
-wire [264:0] i_data_pe;
-wire [264:0] o_data_pe;
+wire [`total_width-1:0] i_data_pe;
+wire [`total_width-1:0] o_data_pe;
 wire o_ready_pe;
 wire o_valid_pe;
 //wire i_ready_pe;

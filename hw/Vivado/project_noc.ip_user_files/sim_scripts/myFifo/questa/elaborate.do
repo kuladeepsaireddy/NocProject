@@ -1,1 +1,0 @@
-vopt -64 +acc -l elaborate.log -L unisims_ver -L unimacro_ver -L secureip -L axis_infrastructure_v1_1_0 -L fifo_generator_v13_0_1 -L axis_data_fifo_v1_1_8 -L xil_defaultlib -work xil_defaultlib xil_defaultlib.myFifo xil_defaultlib.glbl -o myFifo_opt

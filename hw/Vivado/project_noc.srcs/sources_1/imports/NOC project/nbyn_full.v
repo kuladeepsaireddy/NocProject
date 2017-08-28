@@ -1,16 +1,15 @@
-`define X 4
-`define Y 4
+`include "../../../../include_file.v"
 
 module nbyn_full(
 input wire clk,
 // PCI - Scheduler interface ////
 input i_valid_pci,
-input wire [255:0] i_data_pci,
+input wire [`data_width-1:0] i_data_pci,
 output o_ready_pci,
 
 ///From scheduler to PCI///
 
-output wire [255:0] o_data_pci,
+output wire [`data_width-1:0] o_data_pci,
 output o_valid_pci,
 input  i_ready_pci
 
@@ -32,8 +31,8 @@ wire  w_valid_r[`X*`Y-1:0];
 wire  w_valid_t[`X*`Y-1:0];
 //wire [15:0]  r_data_l[`X*`Y-1:0];
 //wire [15:0]  r_data_b[`X*`Y-1:0];
-wire [264:0]  w_data_r[`X*`Y-1:0];
-wire [264:0]  w_data_t[`X*`Y-1:0];
+wire [`total_width-1:0]  w_data_r[`X*`Y-1:0];
+wire [`total_width-1:0]  w_data_t[`X*`Y-1:0];
 
 
 generate

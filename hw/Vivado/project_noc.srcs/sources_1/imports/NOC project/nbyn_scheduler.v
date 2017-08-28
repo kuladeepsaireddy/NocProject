@@ -1,65 +1,81 @@
+
+
+`include "../../../../include_file.v"
+
 module scheduler_noc(
 input clk,
 // PCI - Scheduler interface 
 input i_valid,
-input [255:0] i_data,
+input [`data_width-1:0] i_data,
 output reg o_ready,
 // From scheduler to PCI
-output reg [255:0] o_data_pci,
+output reg [`data_width-1:0] o_data_pci,
 output reg o_valid_pci,
 input i_ready_pci,
 //Scheduler-NOC interfaces
 input i_ready,
 output reg o_valid,
-output reg [264:0] o_data,
+output reg [`total_width-1:0] o_data,
 //from NOC to Schedler
 input wea,
-input [264:0] i_data_pe
+input [`total_width-1:0] i_data_pe
 //output o_ready_pe
 );
 
-reg [1:0] x_coord;
-reg [1:0] y_coord;
-reg [4:0] pck_no;
-reg [4:0] counter;
-reg [4:0] addr_counter;
-reg counter_valid;
-reg [4 : 0] addra;
-reg [4 : 0] addrb;
-reg [256 : 0] dina;
-wire  [255 : 0] doutb;
+
+reg [`x_size-1:0] x_coord;
+reg [`y_size-1:0] y_coord;
+reg [`pck_num-1:0] pck_no;
+//reg [4:0] counter;
+//reg [4:0] addr_counter;
+//reg counter_valid;
+//reg [4 : 0] addra;
+//reg [4 : 0] addrb;
+//reg [256 : 0] dina;
+//wire  [255 : 0] doutb;
 wire valid_flag;
-reg enb;
+//reg enb;
 
 
-reg [256:0] my_mem [16:0];
+reg [`data_width:0] my_mem [`sw_no-1:0];
 
 initial
 begin
   x_coord = 'd0;
   y_coord = 'd1;
   pck_no = 'd0;
-  counter = 'd0;
-  addr_counter = 'd0;
-  addrb<='hz;
+  //counter = 'd0;
+  //addr_counter = 'd0;
+  //addrb<='hz;
   rd_addr<='d0;
 end
 
+/*
+always@(posedge clk)
+begin
+  if(reset)
+    begin 
+	  x_coord = 'd0;
+	  y_coord = 'd1;
+	  pck_no = 'd0;
+	  rd_addr<='d0;
+	end  
+end*/
 
 always @(posedge clk)
 begin
  if(i_valid & o_ready )
    begin
-      o_data[264:9]<=i_data;
-	  o_data[8:4]<=pck_no;
-	  o_data[3:2]<=y_coord;
-	  o_data[1:0]<=x_coord;
+      o_data[`total_width-1:`y_size+`x_size+`pck_num]<=i_data;
+	  o_data[`x_size+`y_size+`pck_num-1:`y_size+`x_size]<=pck_no;
+	  o_data[`x_size+`y_size-1:`x_size]<=y_coord;
+	  o_data[`x_size-1:0]<=x_coord;
 	  o_valid<=1'b1;
 	  
-	  if(y_coord < 3)
+	  if(y_coord < `Y-1)
 	   begin
 	     y_coord<=y_coord+1;
-		if(pck_no < 'd15)
+		if(pck_no < `sw_no-1)
 		 begin
 		   pck_no<=pck_no+1;
 	     end
@@ -71,11 +87,11 @@ begin
 
 	  else
 	   begin
-	    if(x_coord < 3)
+	    if(x_coord < `X-1)
 		  begin
       	    x_coord <= x_coord+1;
 			y_coord<='b0;
-			if(pck_no < 'd15)
+			if(pck_no < `sw_no-1)
 			 begin
 			   pck_no<=pck_no+1;
 			 end 
@@ -88,7 +104,7 @@ begin
 		  begin
 			x_coord <= 'd0;
 			y_coord <= 'd1;
-            if(pck_no < 'd15)
+            if(pck_no < `sw_no-1)
 			 begin
 			   pck_no<=pck_no+1;
 			 end 
@@ -148,23 +164,23 @@ begin
 
 end
 
-reg [4:0]rd_addr;
-wire [4:0] wr_addr;
+reg [`pck_num-1:0]rd_addr;
+wire [`pck_num-1:0] wr_addr;
 
-assign valid_flag = my_mem[rd_addr][256];
-assign wr_addr = i_data_pe[8:4];
+assign valid_flag = my_mem[rd_addr][`data_width];
+assign wr_addr = i_data_pe[`x_size+`y_size+`pck_num-1:`y_size+`x_size];
 
 always@(posedge clk)
  begin
   if(wea)
   begin 
 	 //wr_addr = i_data_pe[8:4];
-	 my_mem[wr_addr]<=i_data_pe[264:9];
-	 my_mem[wr_addr][256]<=1'b1;
+	 my_mem[wr_addr]<=i_data_pe[`total_width-1:`y_size+`x_size+`pck_num];
+	 my_mem[wr_addr][`data_width]<=1'b1;
   end
   if(valid_flag & i_ready_pci )
   begin
-     my_mem[rd_addr][256]<=1'b0;
+     my_mem[rd_addr][`data_width]<=1'b0;
   end       
  end
 
@@ -175,7 +191,7 @@ always@(posedge clk)
      o_data_pci <=my_mem[rd_addr];
 	 o_valid_pci<=1'b1;
 	 
-   if(rd_addr<15)
+   if(rd_addr<`sw_no-1)
      begin
 	  rd_addr<=rd_addr+1;
 	 end 

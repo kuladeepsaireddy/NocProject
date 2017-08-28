@@ -1,11 +1,13 @@
 `define headerSize 1078
 `define imageSize 8192
+
 `timescale 1ns/1ps
 
+`include "../../../../include_file.v"
 module rd_image();
 reg  clk;
-reg  [255:0] o_data;
-wire [255:0] tb_o_data_pci;
+reg  [`data_width-1:0] o_data;
+wire [`data_width-1:0] tb_o_data_pci;
 wire tb_o_ready_pci ;
 reg tb_i_ready_pci=1'b1;
 reg tb_i_valid_pci;
@@ -26,7 +28,7 @@ integer counter_1;
 
 reg [7:0]  header;
 reg [7:0] image_data;
-reg [255:0] test_data;
+reg [`data_width-1:0] test_data;
 reg test_data_1;
 initial
 begin
@@ -122,7 +124,7 @@ always@(posedge clk)
  begin
   if(tb_o_ready_pci & !sendDone)
    begin
-     for(x=0;x<32;x=x+1)
+     for(x=0;x<`iter;x=x+1)
        begin
         rtn = $fscanf(file,"%c",image_data);
         o_data[x*8+:8]<=image_data;
@@ -152,7 +154,7 @@ begin
 	 begin
 	   if(counter < `imageSize)
 	    begin
-         for (j=0;j<32;j=j+1)
+         for (j=0;j<`iter;j=j+1)
           begin		 
            $fwrite(file1,"%c",tb_o_data_pci[j*8+:8]);
           end

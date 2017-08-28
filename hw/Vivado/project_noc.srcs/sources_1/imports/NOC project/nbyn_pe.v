@@ -1,10 +1,12 @@
+
+`include "../../../../include_file.v"
 module nbyn_pe_main(
 input wire clk,
 //from switch
-input wire [264:0] i_data,
+input wire [`total_width-1:0] i_data,
 input wire i_valid,
 //to switch
-output  [264:0] o_data,
+output  [`total_width-1:0] o_data,
 output  o_valid,
 input wire i_ready,
 //to from external world
@@ -19,20 +21,20 @@ input wire i_ready,
 
 // PCI - Scheduler interface ////
 input i_valid_pci,
-input wire [255:0] i_data_pci,
+input wire [`data_width-1:0] i_data_pci,
 output o_ready_pci,
 
 ///From scheduler to PCI///
 
-output wire [255:0] o_data_pci,
+output wire [`data_width-1:0] o_data_pci,
 output o_valid_pci,
 input  i_ready_pci
 );
 
 
-wire [264:0]  main_input;
+wire [`total_width-1:0]  main_input;
 wire main_valid_pe;
-reg [264:0] main_output;
+reg [`total_width-1:0] main_output;
 wire o_ready_scheduler;
 reg o_valid_scheduler;
 
@@ -115,7 +117,6 @@ scheduler_noc scheduler_inst(
 //from NOC to Schedler////
 .wea(o_valid_scheduler),
 .i_data_pe(main_output)
-
 );
 
 

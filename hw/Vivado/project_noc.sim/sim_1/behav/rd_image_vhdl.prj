@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl fifo_generator_v13_0_1  "../../../project_noc.ip_user_files/ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd"
-vhdl fifo_generator_v13_0_1  "../../../project_noc.ip_user_files/ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd"
-
-# Do not sort compile order
-nosort
