@@ -1,0 +1,2458 @@
+
+****** Vivado v2015.4 (64-bit)
+  **** SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+  **** IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source build.tcl
+# open_project project_noc.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'D:/mygit/NocProject/hw/Vivado/project_noc.ip_user_files'.
+WARNING: [filemgmt 56-3] IPStaticSourceDir: Could not find the directory 'D:/mygit/NocProject/hw/Vivado/project_noc.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'myFifo' is locked:
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'myFifo' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# synth_design -name synth_2 -part xc7vx690tffg1761-2 -mode out_of_context -constrset constrs_1 -top nbyn_full
+Command: synth_design -name synth_2 -part xc7vx690tffg1761-2 -mode out_of_context -constrset constrs_1 -top nbyn_full
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 298.398 ; gain = 127.277
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'nbyn_full' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_full.v:3]
+INFO: [Synth 8-638] synthesizing module 'nbyn' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized0' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized0' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized1' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized1' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized2' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized2' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized3' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized3' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized4' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized4' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized5' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized5' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized6' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 0 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized6' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized7' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized7' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized8' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized8' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized9' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized9' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized10' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized10' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized11' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized11' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized12' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized12' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized13' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized13' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized14' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 1 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized14' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized15' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized15' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized16' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized16' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized17' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized17' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized18' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized18' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized19' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized19' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized20' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized20' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized21' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized21' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized22' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 2 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized22' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized23' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized23' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized24' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized24' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized25' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized25' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized26' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized26' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized27' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized27' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized28' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized28' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized29' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized29' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized30' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 3 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized30' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized31' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized31' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized32' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized32' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized33' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized33' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized34' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized34' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized35' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized35' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized36' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized36' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized37' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized37' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized38' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 4 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized38' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized39' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized39' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized40' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized40' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized41' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized41' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized42' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized42' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized43' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized43' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized44' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized44' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized45' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized45' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized46' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 5 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized46' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized47' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized47' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized48' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized48' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized49' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized49' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized50' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized50' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized51' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized51' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized52' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized52' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized53' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized53' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized54' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 6 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized54' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized55' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized55' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized56' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized56' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized57' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized57' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized58' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized58' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized59' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized59' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized60' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized60' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized61' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized61' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-638] synthesizing module 'nbyn__parameterized62' [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+	Parameter x_coord bound to: 7 - type: integer 
+	Parameter y_coord bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'nbyn__parameterized62' (1#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_switch.v:5]
+INFO: [Synth 8-256] done synthesizing module 'nbyn_full' (2#1) [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/imports/NOC project/nbyn_full.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 453.973 ; gain = 282.852
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 453.973 ; gain = 282.852
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/constrs_1/new/noc.xdc]
+Finished Parsing XDC File [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/constrs_1/new/noc.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.329 . Memory (MB): peak = 973.449 ; gain = 3.098
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:09 ; elapsed = 00:01:15 . Memory (MB): peak = 973.449 ; gain = 802.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:09 ; elapsed = 00:01:15 . Memory (MB): peak = 973.449 ; gain = 802.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:15 . Memory (MB): peak = 973.449 ; gain = 802.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:28 . Memory (MB): peak = 973.449 ; gain = 802.328
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     42137|
+|2     |nbyn_full__GB1 |           1|     15321|
+|3     |nbyn_full__GB2 |           1|     15323|
+|4     |nbyn_full__GB3 |           1|     45967|
+|5     |nbyn_full__GB4 |           1|     30642|
+|6     |nbyn_full__GB5 |           1|     42134|
+|7     |nbyn_full__GB6 |           1|     53628|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 192   
+	                1 Bit    Registers := 192   
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 64    
+	   2 Input     76 Bit        Muxes := 128   
+	   9 Input      1 Bit        Muxes := 128   
+	   8 Input      1 Bit        Muxes := 64    
+	   2 Input      1 Bit        Muxes := 192   
+	  10 Input      1 Bit        Muxes := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module nbyn__parameterized17 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized22 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized21 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized20 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized19 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized18 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized16 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized10 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized11 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized12 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized13 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized14 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized15 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized30 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized43 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized33 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized34 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized35 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized23 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized24 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized25 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized26 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized27 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized28 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized29 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized58 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized59 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized60 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized38 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized39 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized40 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized37 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized36 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized32 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized44 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized45 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized46 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized31 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized52 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized49 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized50 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized51 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized48 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized53 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized54 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized55 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized56 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized57 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized47 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized42 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized41 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized61 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+Module nbyn__parameterized62 
+Detailed RTL Component Info : 
++---Registers : 
+	               76 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     76 Bit        Muxes := 1     
+	   2 Input     76 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:29 . Memory (MB): peak = 973.449 ; gain = 802.328
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:02:12 . Memory (MB): peak = 973.449 ; gain = 802.328
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:01:38 ; elapsed = 00:02:12 . Memory (MB): peak = 973.449 ; gain = 802.328
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     44634|
+|2     |nbyn_full__GB1 |           1|     16229|
+|3     |nbyn_full__GB2 |           1|     16231|
+|4     |nbyn_full__GB3 |           1|     48691|
+|5     |nbyn_full__GB4 |           1|     32458|
+|6     |nbyn_full__GB5 |           1|     44631|
+|7     |nbyn_full__GB6 |           1|     56806|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:03:22 ; elapsed = 00:04:11 . Memory (MB): peak = 1204.180 ; gain = 1033.059
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:03:22 ; elapsed = 00:04:11 . Memory (MB): peak = 1204.180 ; gain = 1033.059
+
+Report RTL Partitions: 
++------+---------------+------------+----------+
+|      |RTL Partition  |Replication |Instances |
++------+---------------+------------+----------+
+|1     |nbyn_full__GB0 |           1|     10740|
+|2     |nbyn_full__GB1 |           1|      3884|
+|3     |nbyn_full__GB2 |           1|      4412|
+|4     |nbyn_full__GB3 |           1|     11480|
+|5     |nbyn_full__GB4 |           1|      7747|
+|6     |nbyn_full__GB5 |           1|     10953|
+|7     |nbyn_full__GB6 |           1|     13963|
++------+---------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:39 ; elapsed = 00:04:28 . Memory (MB): peak = 1348.305 ; gain = 1177.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:50 ; elapsed = 00:05:40 . Memory (MB): peak = 1429.129 ; gain = 1258.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |nbyn_full_GT0 |           1|     12495|
+|2     |nbyn_full_GT1 |           1|     10982|
+|3     |nbyn_full_GT2 |           1|     39426|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:05:08 ; elapsed = 00:05:58 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:05:08 ; elapsed = 00:05:58 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:05:08 ; elapsed = 00:05:58 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:10 ; elapsed = 00:06:00 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:10 ; elapsed = 00:06:00 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:14 ; elapsed = 00:06:04 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:14 ; elapsed = 00:06:04 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:15 ; elapsed = 00:06:05 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:16 ; elapsed = 00:06:06 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |   183|
+|2     |LUT3 |  4805|
+|3     |LUT4 |   694|
+|4     |LUT5 |  4185|
+|5     |LUT6 |  6597|
+|6     |FDRE | 14705|
+|7     |FDSE |    79|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+----------------------+------+
+|      |Instance                                   |Module                |Cells |
++------+-------------------------------------------+----------------------+------+
+|1     |top                                        |                      | 31248|
+|2     |  \xs[0].ys[0].instnce.nbyn_main_instance  |nbyn                  |   346|
+|3     |  \xs[0].ys[1].instnce.nbyn_instance       |nbyn__parameterized0  |   563|
+|4     |  \xs[0].ys[2].instnce.nbyn_instance       |nbyn__parameterized1  |   417|
+|5     |  \xs[0].ys[3].instnce.nbyn_instance       |nbyn__parameterized2  |   412|
+|6     |  \xs[0].ys[4].instnce.nbyn_instance       |nbyn__parameterized3  |   558|
+|7     |  \xs[0].ys[5].instnce.nbyn_instance       |nbyn__parameterized4  |   486|
+|8     |  \xs[0].ys[6].instnce.nbyn_instance       |nbyn__parameterized5  |   501|
+|9     |  \xs[0].ys[7].instnce.nbyn_instance       |nbyn__parameterized6  |   490|
+|10    |  \xs[1].ys[0].instnce.nbyn_instance       |nbyn__parameterized7  |   421|
+|11    |  \xs[1].ys[1].instnce.nbyn_instance       |nbyn__parameterized8  |   646|
+|12    |  \xs[1].ys[2].instnce.nbyn_instance       |nbyn__parameterized9  |   557|
+|13    |  \xs[1].ys[3].instnce.nbyn_instance       |nbyn__parameterized10 |   410|
+|14    |  \xs[1].ys[4].instnce.nbyn_instance       |nbyn__parameterized11 |   557|
+|15    |  \xs[1].ys[5].instnce.nbyn_instance       |nbyn__parameterized12 |   568|
+|16    |  \xs[1].ys[6].instnce.nbyn_instance       |nbyn__parameterized13 |   559|
+|17    |  \xs[1].ys[7].instnce.nbyn_instance       |nbyn__parameterized14 |   500|
+|18    |  \xs[2].ys[0].instnce.nbyn_instance       |nbyn__parameterized15 |   484|
+|19    |  \xs[2].ys[1].instnce.nbyn_instance       |nbyn__parameterized16 |   338|
+|20    |  \xs[2].ys[2].instnce.nbyn_instance       |nbyn__parameterized17 |   412|
+|21    |  \xs[2].ys[3].instnce.nbyn_instance       |nbyn__parameterized18 |   333|
+|22    |  \xs[2].ys[4].instnce.nbyn_instance       |nbyn__parameterized19 |   488|
+|23    |  \xs[2].ys[5].instnce.nbyn_instance       |nbyn__parameterized20 |   484|
+|24    |  \xs[2].ys[6].instnce.nbyn_instance       |nbyn__parameterized21 |   566|
+|25    |  \xs[2].ys[7].instnce.nbyn_instance       |nbyn__parameterized22 |   492|
+|26    |  \xs[3].ys[0].instnce.nbyn_instance       |nbyn__parameterized23 |   633|
+|27    |  \xs[3].ys[1].instnce.nbyn_instance       |nbyn__parameterized24 |   496|
+|28    |  \xs[3].ys[2].instnce.nbyn_instance       |nbyn__parameterized25 |   632|
+|29    |  \xs[3].ys[3].instnce.nbyn_instance       |nbyn__parameterized26 |   483|
+|30    |  \xs[3].ys[4].instnce.nbyn_instance       |nbyn__parameterized27 |   421|
+|31    |  \xs[3].ys[5].instnce.nbyn_instance       |nbyn__parameterized28 |   334|
+|32    |  \xs[3].ys[6].instnce.nbyn_instance       |nbyn__parameterized29 |   401|
+|33    |  \xs[3].ys[7].instnce.nbyn_instance       |nbyn__parameterized30 |   337|
+|34    |  \xs[4].ys[0].instnce.nbyn_instance       |nbyn__parameterized31 |   569|
+|35    |  \xs[4].ys[1].instnce.nbyn_instance       |nbyn__parameterized32 |   344|
+|36    |  \xs[4].ys[2].instnce.nbyn_instance       |nbyn__parameterized33 |   499|
+|37    |  \xs[4].ys[3].instnce.nbyn_instance       |nbyn__parameterized34 |   500|
+|38    |  \xs[4].ys[4].instnce.nbyn_instance       |nbyn__parameterized35 |   571|
+|39    |  \xs[4].ys[5].instnce.nbyn_instance       |nbyn__parameterized36 |   563|
+|40    |  \xs[4].ys[6].instnce.nbyn_instance       |nbyn__parameterized37 |   560|
+|41    |  \xs[4].ys[7].instnce.nbyn_instance       |nbyn__parameterized38 |   338|
+|42    |  \xs[5].ys[0].instnce.nbyn_instance       |nbyn__parameterized39 |   640|
+|43    |  \xs[5].ys[1].instnce.nbyn_instance       |nbyn__parameterized40 |   560|
+|44    |  \xs[5].ys[2].instnce.nbyn_instance       |nbyn__parameterized41 |   496|
+|45    |  \xs[5].ys[3].instnce.nbyn_instance       |nbyn__parameterized42 |   565|
+|46    |  \xs[5].ys[4].instnce.nbyn_instance       |nbyn__parameterized43 |   491|
+|47    |  \xs[5].ys[5].instnce.nbyn_instance       |nbyn__parameterized44 |   553|
+|48    |  \xs[5].ys[6].instnce.nbyn_instance       |nbyn__parameterized45 |   475|
+|49    |  \xs[5].ys[7].instnce.nbyn_instance       |nbyn__parameterized46 |   403|
+|50    |  \xs[6].ys[0].instnce.nbyn_instance       |nbyn__parameterized47 |   412|
+|51    |  \xs[6].ys[1].instnce.nbyn_instance       |nbyn__parameterized48 |   488|
+|52    |  \xs[6].ys[2].instnce.nbyn_instance       |nbyn__parameterized49 |   418|
+|53    |  \xs[6].ys[3].instnce.nbyn_instance       |nbyn__parameterized50 |   488|
+|54    |  \xs[6].ys[4].instnce.nbyn_instance       |nbyn__parameterized51 |   328|
+|55    |  \xs[6].ys[5].instnce.nbyn_instance       |nbyn__parameterized52 |   494|
+|56    |  \xs[6].ys[6].instnce.nbyn_instance       |nbyn__parameterized53 |   552|
+|57    |  \xs[6].ys[7].instnce.nbyn_instance       |nbyn__parameterized54 |   333|
+|58    |  \xs[7].ys[0].instnce.nbyn_instance       |nbyn__parameterized55 |   493|
+|59    |  \xs[7].ys[1].instnce.nbyn_instance       |nbyn__parameterized56 |   639|
+|60    |  \xs[7].ys[2].instnce.nbyn_instance       |nbyn__parameterized57 |   492|
+|61    |  \xs[7].ys[3].instnce.nbyn_instance       |nbyn__parameterized58 |   560|
+|62    |  \xs[7].ys[4].instnce.nbyn_instance       |nbyn__parameterized59 |   637|
+|63    |  \xs[7].ys[5].instnce.nbyn_instance       |nbyn__parameterized60 |   484|
+|64    |  \xs[7].ys[6].instnce.nbyn_instance       |nbyn__parameterized61 |   557|
+|65    |  \xs[7].ys[7].instnce.nbyn_instance       |nbyn__parameterized62 |   421|
++------+-------------------------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:16 ; elapsed = 00:06:06 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:15 ; elapsed = 00:05:21 . Memory (MB): peak = 1436.652 ; gain = 674.969
+Synthesis Optimization Complete : Time (s): cpu = 00:05:16 ; elapsed = 00:06:06 . Memory (MB): peak = 1436.652 ; gain = 1265.531
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-491] No black box instances found for design checkpoint 'd:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/ip/myFifo/myFifo.dcp'.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'myFifo'. The XDC file d:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/ip/myFifo/myFifo_ooc.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'myFifo'. The XDC file d:/mygit/NocProject/hw/Vivado/project_noc.srcs/sources_1/ip/myFifo/myFifo/myFifo.xdc will not be read for any cell of this module.
+Parsing XDC File [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/constrs_1/new/noc.xdc]
+Finished Parsing XDC File [D:/mygit/NocProject/hw/Vivado/project_noc.srcs/constrs_1/new/noc.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+141 Infos, 0 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:24 ; elapsed = 00:06:11 . Memory (MB): peak = 1436.652 ; gain = 1194.445
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.427 . Memory (MB): peak = 1436.652 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+Implement Debug Cores | Checksum: 13c704592
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 13c704592
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1572.555 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant Propagation | Checksum: 13c704592
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1572.555 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 0 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: 13c704592
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1572.555 ; gain = 0.000
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1572.555 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 13c704592
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1572.555 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 13c704592
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1572.555 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1572.555 ; gain = 135.902
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1572.555 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1572.555 ; gain = 0.000
+
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 1.1.1 Pre-Place Cells
+Phase 1.1.1 Pre-Place Cells | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.392 . Memory (MB): peak = 1572.555 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 1.1.2 IO and Clk Clean Up
+Phase 1.1.2 IO and Clk Clean Up | Checksum: 00000000
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1600.070 ; gain = 27.516
+
+Phase 1.1.3 Implementation Feasibility check On IDelay
+Phase 1.1.3 Implementation Feasibility check On IDelay | Checksum: 00000000
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1600.070 ; gain = 27.516
+
+Phase 1.1.4 Commit IO Placement
+Phase 1.1.4 Commit IO Placement | Checksum: 00000000
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1600.070 ; gain = 27.516
+Phase 1.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: cee2884e
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1600.070 ; gain = 27.516
+
+Phase 1.2 Build Placer Netlist Model
+
+Phase 1.2.1 Place Init Design
+
+Phase 1.2.1.1 Init Lut Pin Assignment
+Phase 1.2.1.1 Init Lut Pin Assignment | Checksum: 1c149cc4c
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1600.070 ; gain = 27.516
+Phase 1.2.1 Place Init Design | Checksum: f89e2171
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1600.070 ; gain = 27.516
+Phase 1.2 Build Placer Netlist Model | Checksum: f89e2171
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1600.070 ; gain = 27.516
+
+Phase 1.3 Constrain Clocks/Macros
+
+Phase 1.3.1 Constrain Global/Regional Clocks
+Phase 1.3.1 Constrain Global/Regional Clocks | Checksum: f89e2171
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1600.070 ; gain = 27.516
+Phase 1.3 Constrain Clocks/Macros | Checksum: f89e2171
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1600.070 ; gain = 27.516
+Phase 1 Placer Initialization | Checksum: f89e2171
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:22 . Memory (MB): peak = 1600.070 ; gain = 27.516
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 196b89395
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:43 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 196b89395
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:43 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1cb2fd2d3
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:51 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 167aec202
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:52 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3.4 updateClock Trees: DP
+Phase 3.4 updateClock Trees: DP | Checksum: 167aec202
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:52 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 19571fb57
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:54 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 12302f872
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:56 . Memory (MB): peak = 1617.258 ; gain = 44.703
+
+Phase 3.7 Small Shape Detail Placement
+
+Phase 3.7.1 Commit Small Macros and Core Logic
+
+Phase 3.7.1.1 Commit Slice Clusters
+Phase 3.7.1.1 Commit Slice Clusters | Checksum: 1f8659fec
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:33 . Memory (MB): peak = 1653.832 ; gain = 81.277
+Phase 3.7.1 Commit Small Macros and Core Logic | Checksum: 1f8659fec
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:33 . Memory (MB): peak = 1653.832 ; gain = 81.277
+
+Phase 3.7.2 Clock Restriction Legalization for Leaf Columns
+Phase 3.7.2 Clock Restriction Legalization for Leaf Columns | Checksum: 1f8659fec
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:33 . Memory (MB): peak = 1654.141 ; gain = 81.586
+
+Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins
+Phase 3.7.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1f8659fec
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:34 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 3.7 Small Shape Detail Placement | Checksum: 1f8659fec
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:34 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 2246951c3
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:35 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 3 Detail Placement | Checksum: 2246951c3
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:36 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+
+Phase 4.1.1 callUpdateTimingBeforePCO
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+Phase 4.1.1 callUpdateTimingBeforePCO | Checksum: 173013613
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:42 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.1.2 updateClock Trees: PCOPT
+Phase 4.1.2 updateClock Trees: PCOPT | Checksum: 173013613
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:42 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.1.3 Post Placement Optimization
+
+Phase 4.1.3.1 PCOPT Shape updates
+
+Phase 4.1.3.1.1 removeOptionalFFsFromShapes
+Phase 4.1.3.1.1 removeOptionalFFsFromShapes | Checksum: 173013613
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:42 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.1.3.1.2 deleteLutnmShapes
+
+Phase 4.1.3.1.2.1 deleteShapes
+Phase 4.1.3.1.2.1 deleteShapes | Checksum: d8b82b24
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:42 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 4.1.3.1.2 deleteLutnmShapes | Checksum: d8b82b24
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:43 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 4.1.3.1 PCOPT Shape updates | Checksum: d8b82b24
+
+Time (s): cpu = 00:02:09 ; elapsed = 00:01:43 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.1.3.2 Post Placement Timing Optimization
+
+Phase 4.1.3.2.1 Restore Best Placement
+Phase 4.1.3.2.1 Restore Best Placement | Checksum: 79746eaa
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:34 . Memory (MB): peak = 1654.836 ; gain = 82.281
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.025. For the most accurate timing information please run report_timing.
+Phase 4.1.3.2 Post Placement Timing Optimization | Checksum: 79746eaa
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:34 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 4.1.3 Post Placement Optimization | Checksum: 79746eaa
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:34 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 4.1 Post Commit Optimization | Checksum: 79746eaa
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:35 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 79746eaa
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:35 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.3 Post Placement Cleanup
+Phase 4.3 Post Placement Cleanup | Checksum: 79746eaa
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:35 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.4 Placer Reporting
+
+Phase 4.4.1 Restore STA
+Phase 4.4.1 Restore STA | Checksum: 79746eaa
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:35 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 4.4 Placer Reporting | Checksum: 79746eaa
+
+Time (s): cpu = 00:03:00 ; elapsed = 00:02:35 . Memory (MB): peak = 1654.836 ; gain = 82.281
+
+Phase 4.5 Final Placement Cleanup
+Phase 4.5 Final Placement Cleanup | Checksum: 767ad130
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:36 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 767ad130
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:36 . Memory (MB): peak = 1654.836 ; gain = 82.281
+Ending Placer Task | Checksum: 061f7b14
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:36 . Memory (MB): peak = 1654.836 ; gain = 82.281
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:03:08 ; elapsed = 00:02:40 . Memory (MB): peak = 1654.836 ; gain = 82.281
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 61f7b14 ConstDB: 0 ShapeSum: 0 RouteDB: 0
+
+Phase 1 Build RT Design
+Using Offlined NodeGraph Builder
+WARNING: [Route 35-197] Clock port "clk" does not have an associated HD.CLK_SRC. Without this constraint, timing analysis may not be accurate and upstream checks cannot be done to ensure correct clock placement.
+WARNING: [Route 35-198] Port "r_data_pe[1368]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1368]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1369]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1369]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1370]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1370]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[17]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[17]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1630]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1630]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1654]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1654]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2238]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2238]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2262]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2262]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1554]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1554]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1372]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1372]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1373]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1373]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[18]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[18]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[16]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[16]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[837]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[837]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1353]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1353]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1445]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1445]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1444]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1444]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1446]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1446]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[19]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[19]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2089]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2089]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2055]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2055]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2056]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2056]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2103]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2103]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1961]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1961]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1405]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1405]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1429]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1429]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1435]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1435]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1220]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1220]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1221]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1221]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1219]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1219]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1751]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1751]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1753]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1753]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1752]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1752]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[23]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[23]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1674]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1674]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1675]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1675]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1523]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1523]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1525]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1525]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1521]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1521]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1522]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1522]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1937]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1937]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1598]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1598]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1601]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1601]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2099]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2099]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1947]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1947]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[21]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[21]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1339]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1339]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[29]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[29]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1719]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1719]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1597]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1597]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1421]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1421]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1270]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1270]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2162]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2162]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2186]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2186]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1292]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1292]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1294]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1294]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1293]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1293]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1371]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1371]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1402]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1402]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1443]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1443]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1326]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1326]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1295]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1295]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1296]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1296]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1297]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1297]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1217]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1217]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1478]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1478]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1216]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1216]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1218]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1218]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_valid_pe[11]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_valid_pe[11]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2081]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2081]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2116]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2116]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[838]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[838]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1449]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1449]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1447]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1447]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1448]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1448]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1749]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1749]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1750]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1750]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2037]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2037]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2043]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2043]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2057]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2057]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1595]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1595]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1673]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1673]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1677]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1677]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[988]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[988]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[989]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[989]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[990]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[990]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2013]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2013]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2023]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2023]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2027]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2027]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1599]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1599]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1596]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1596]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2165]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2165]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2175]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2175]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2132]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2132]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2128]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2128]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2129]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2129]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2131]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2131]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[2133]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[2133]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1600]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1600]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+WARNING: [Route 35-198] Port "r_data_pe[1491]" does not have an associated HD.PARTPIN_LOCS, which will prevent the partial routing of the signal "r_data_pe[1491]". Without this partial route, timing analysis to/from this port will not be accurate, and no routing information for this port can be exported.
+INFO: [Common 17-14] Message 'Route 35-198' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1 Build RT Design | Checksum: 52eb6289
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:12 . Memory (MB): peak = 2030.359 ; gain = 375.523
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 52eb6289
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:12 . Memory (MB): peak = 2030.359 ; gain = 375.523
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 52eb6289
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:01:12 . Memory (MB): peak = 2038.586 ; gain = 383.750
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 17991a8e2
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2066.645 ; gain = 411.809
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.207  | TNS=0.000  | WHS=0.065  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 18c953856
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:01:24 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 18d93545e
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:29 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4819
+ Number of Nodes with overlaps = 598
+ Number of Nodes with overlaps = 97
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 1754d250d
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:57 . Memory (MB): peak = 2066.645 ; gain = 411.809
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1adfa36f8
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:57 . Memory (MB): peak = 2066.645 ; gain = 411.809
+Phase 4 Rip-up And Reroute | Checksum: 1adfa36f8
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:57 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1adfa36f8
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:58 . Memory (MB): peak = 2066.645 ; gain = 411.809
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1adfa36f8
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:58 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1adfa36f8
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:58 . Memory (MB): peak = 2066.645 ; gain = 411.809
+Phase 5 Delay and Skew Optimization | Checksum: 1adfa36f8
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:59 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Update Timing
+Phase 6.1 Update Timing | Checksum: 15b23fff8
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:02:00 . Memory (MB): peak = 2066.645 ; gain = 411.809
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.165  | TNS=0.000  | WHS=0.089  | THS=0.000  |
+
+Phase 6 Post Hold Fix | Checksum: 15b23fff8
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:02:00 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.27324 %
+  Global Horizontal Routing Utilization  = 1.43193 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: e1d2ea6e
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:02:00 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: e1d2ea6e
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:02:00 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 119450625
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:03 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.165  | TNS=0.000  | WHS=0.089  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 119450625
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:03 . Memory (MB): peak = 2066.645 ; gain = 411.809
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:21 ; elapsed = 00:02:03 . Memory (MB): peak = 2066.645 ; gain = 411.809
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:28 ; elapsed = 00:02:07 . Memory (MB): peak = 2066.645 ; gain = 411.809
+# report_utilization
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Aug 28 03:25:02 2017
+| Host         : Sai-PC running 64-bit major release  (build 9200)
+| Command      : report_utilization
+| Design       : nbyn_full
+| Device       : 7vx690tffg1761-2
+| Design State : Fully Placed
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs              | 16141 |     0 |    433200 |  3.73 |
+|   LUT as Logic          | 16141 |     0 |    433200 |  3.73 |
+|   LUT as Memory         |     0 |     0 |    174200 |  0.00 |
+| Slice Registers         | 14784 |     0 |    866400 |  1.71 |
+|   Register as Flip Flop | 14784 |     0 |    866400 |  1.71 |
+|   Register as Latch     |     0 |     0 |    866400 |  0.00 |
+| F7 Muxes                |     0 |     0 |    216600 |  0.00 |
+| F8 Muxes                |     0 |     0 |    108300 |  0.00 |
++-------------------------+-------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 79    |          Yes |         Set |            - |
+| 14705 |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++-------------------------------------------------------------+-----------+-------+-----------+-------+
+|                          Site Type                          |    Used   | Fixed | Available | Util% |
++-------------------------------------------------------------+-----------+-------+-----------+-------+
+| Slice                                                       |      4981 |     0 |    108300 |  4.60 |
+|   SLICEL                                                    |      3116 |     0 |           |       |
+|   SLICEM                                                    |      1865 |     0 |           |       |
+| LUT as Logic                                                |     16141 |     0 |    433200 |  3.73 |
+|   using O5 output only                                      |         2 |       |           |       |
+|   using O6 output only                                      |     15816 |       |           |       |
+|   using O5 and O6                                           |       323 |       |           |       |
+| LUT as Memory                                               |         0 |     0 |    174200 |  0.00 |
+|   LUT as Distributed RAM                                    |         0 |     0 |           |       |
+|   LUT as Shift Register                                     |         0 |     0 |           |       |
+| LUT Flip Flop Pairs                                         |     16153 |     0 |    433200 |  3.73 |
+|   fully used LUT-FF pairs                                   |     14668 |       |           |       |
+|   LUT-FF pairs with unused LUT                              |        14 |       |           |       |
+|   LUT-FF pairs with unused Flip Flop                        |      1471 |       |           |       |
+| Unique Control Sets                                         |       224 |       |           |       |
+| Minimum number of registers lost to control set restriction | 840(Lost) |       |           |       |
++-------------------------------------------------------------+-----------+-------+-----------+-------+
+
+
+3. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      1470 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |      1470 |  0.00 |
+|   RAMB18       |    0 |     0 |      2940 |  0.00 |
++----------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |      3600 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    0 |     0 |       850 |  0.00 |
+| Bonded IPADs                |    0 |     0 |       110 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        72 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        20 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        20 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        80 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        80 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        20 |  0.00 |
+| IBUFGDS                     |    0 |     0 |       816 |  0.00 |
+| GTHE2_CHANNEL               |    0 |     0 |        36 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        80 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        80 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |      1000 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        40 |  0.00 |
+| ILOGIC                      |    0 |     0 |       850 |  0.00 |
+| OLOGIC                      |    0 |     0 |       850 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+6. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |        80 |  0.00 |
+| MMCME2_ADV |    0 |     0 |        20 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |        20 |  0.00 |
+| BUFMRCE    |    0 |     0 |        40 |  0.00 |
+| BUFHCE     |    0 |     0 |       240 |  0.00 |
+| BUFR       |    0 |     0 |        80 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_3_0    |    0 |     0 |         3 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+8. Primitives
+-------------
+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| FDRE     | 14705 |        Flop & Latch |
+| LUT6     |  6597 |                 LUT |
+| LUT3     |  4805 |                 LUT |
+| LUT5     |  4185 |                 LUT |
+| LUT4     |   694 |                 LUT |
+| LUT2     |   183 |                 LUT |
+| FDSE     |    79 |        Flop & Latch |
++----------+-------+---------------------+
+
+
+9. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 2066.645 ; gain = 0.000
+# report_timing_summary
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date         : Mon Aug 28 03:25:10 2017
+| Host         : Sai-PC running 64-bit major release  (build 9200)
+| Command      : report_timing_summary
+| Design       : nbyn_full
+| Device       : 7vx690t-ffg1761
+| Speed File   : -2  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 4928 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 4992 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.167        0.000                      0                29440        0.089        0.000                      0                29440        1.600        0.000                       0                 14784  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+Clk    {0.000 2.000}        4.000           250.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+Clk                 0.167        0.000                      0                29440        0.089        0.000                      0                29440        1.600        0.000                       0                 14784  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  Clk
+  To Clock:  Clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.167ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.089ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        1.600ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.167ns  (required time - arrival time)
+  Source:                 xs[3].ys[6].instnce.nbyn_instance/o_valid_r_reg/C
+                            (rising edge-triggered cell FDRE clocked by Clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            xs[4].ys[6].instnce.nbyn_instance/o_data_r_reg[59]/CE
+                            (rising edge-triggered cell FDRE clocked by Clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            4.000ns  (Clk rise@4.000ns - Clk rise@0.000ns)
+  Data Path Delay:        3.592ns  (logic 0.659ns (18.344%)  route 2.933ns (81.656%))
+  Logic Levels:           4  (LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 4.510 - 4.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=14783, unset)        0.537     0.537    xs[3].ys[6].instnce.nbyn_instance/clk
+    SLICE_X84Y37         FDRE                                         r  xs[3].ys[6].instnce.nbyn_instance/o_valid_r_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X84Y37         FDRE (Prop_fdre_C_Q)         0.204     0.741 r  xs[3].ys[6].instnce.nbyn_instance/o_valid_r_reg/Q
+                         net (fo=5, routed)           0.592     1.333    xs[3].ys[6].instnce.nbyn_instance/p_345_out
+    SLICE_X85Y38         LUT4 (Prop_lut4_I0_O)        0.134     1.467 f  xs[3].ys[6].instnce.nbyn_instance/o_valid_pe_i_4__45/O
+                         net (fo=2, routed)           0.239     1.706    xs[3].ys[6].instnce.nbyn_instance/o_valid_pe_i_4__45_n_0
+    SLICE_X84Y38         LUT4 (Prop_lut4_I3_O)        0.142     1.848 r  xs[3].ys[6].instnce.nbyn_instance/o_valid_pe_i_2__48/O
+                         net (fo=4, routed)           0.361     2.209    xs[4].ys[5].instnce.nbyn_instance/o_data_r_reg[4]_1
+    SLICE_X82Y38         LUT5 (Prop_lut5_I0_O)        0.136     2.345 r  xs[4].ys[5].instnce.nbyn_instance/o_data_r[75]_i_8__47/O
+                         net (fo=77, routed)          0.299     2.644    xs[4].ys[5].instnce.nbyn_instance/o_data_r[75]_i_8__47_n_0
+    SLICE_X80Y39         LUT6 (Prop_lut6_I5_O)        0.043     2.687 r  xs[4].ys[5].instnce.nbyn_instance/o_data_r[75]_i_1__49/O
+                         net (fo=77, routed)          1.443     4.129    xs[4].ys[6].instnce.nbyn_instance/E[0]
+    SLICE_X58Y7          FDRE                                         r  xs[4].ys[6].instnce.nbyn_instance/o_data_r_reg[59]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        4.000     4.000 r  
+                                                      0.000     4.000 r  clk (IN)
+                         net (fo=14783, unset)        0.510     4.510    xs[4].ys[6].instnce.nbyn_instance/clk
+    SLICE_X58Y7          FDRE                                         r  xs[4].ys[6].instnce.nbyn_instance/o_data_r_reg[59]/C
+                         clock pessimism              0.000     4.510    
+                         clock uncertainty           -0.035     4.475    
+    SLICE_X58Y7          FDRE (Setup_fdre_C_CE)      -0.178     4.297    xs[4].ys[6].instnce.nbyn_instance/o_data_r_reg[59]
+  -------------------------------------------------------------------
+                         required time                          4.297    
+                         arrival time                          -4.129    
+  -------------------------------------------------------------------
+                         slack                                  0.167    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.089ns  (arrival time - required time)
+  Source:                 xs[0].ys[1].instnce.nbyn_instance/o_data_r_reg[54]/C
+                            (rising edge-triggered cell FDRE clocked by Clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Destination:            xs[1].ys[1].instnce.nbyn_instance/o_data_r_reg[54]/D
+                            (rising edge-triggered cell FDRE clocked by Clk  {rise@0.000ns fall@2.000ns period=4.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.190ns  (logic 0.128ns (67.322%)  route 0.062ns (32.678%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.280ns
+    Source Clock Delay      (SCD):    0.266ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=14783, unset)        0.266     0.266    xs[0].ys[1].instnce.nbyn_instance/clk
+    SLICE_X23Y20         FDRE                                         r  xs[0].ys[1].instnce.nbyn_instance/o_data_r_reg[54]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y20         FDRE (Prop_fdre_C_Q)         0.100     0.366 r  xs[0].ys[1].instnce.nbyn_instance/o_data_r_reg[54]/Q
+                         net (fo=3, routed)           0.062     0.428    xs[1].ys[0].instnce.nbyn_instance/o_data_r_reg[75]_3[54]
+    SLICE_X22Y20         LUT5 (Prop_lut5_I4_O)        0.028     0.456 r  xs[1].ys[0].instnce.nbyn_instance/o_data_r[54]_i_1__6/O
+                         net (fo=1, routed)           0.000     0.456    xs[1].ys[1].instnce.nbyn_instance/o_data_t_reg[75]_4[54]
+    SLICE_X22Y20         FDRE                                         r  xs[1].ys[1].instnce.nbyn_instance/o_data_r_reg[54]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=14783, unset)        0.280     0.280    xs[1].ys[1].instnce.nbyn_instance/clk
+    SLICE_X22Y20         FDRE                                         r  xs[1].ys[1].instnce.nbyn_instance/o_data_r_reg[54]/C
+                         clock pessimism              0.000     0.280    
+    SLICE_X22Y20         FDRE (Hold_fdre_C_D)         0.087     0.367    xs[1].ys[1].instnce.nbyn_instance/o_data_r_reg[54]
+  -------------------------------------------------------------------
+                         required time                         -0.367    
+                         arrival time                           0.456    
+  -------------------------------------------------------------------
+                         slack                                  0.089    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         Clk
+Waveform(ns):       { 0.000 2.000 }
+Period(ns):         4.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     FDRE/C   n/a            0.750         4.000       3.250      SLICE_X25Y48  xs[5].ys[3].instnce.nbyn_instance/o_valid_t_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.400         2.000       1.600      SLICE_X25Y48  xs[5].ys[3].instnce.nbyn_instance/o_valid_t_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.350         2.000       1.650      SLICE_X53Y33  xs[0].ys[0].instnce.nbyn_main_instance/o_data_pe_reg[0]/C
+
+
+
+report_timing_summary: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2066.645 ; gain = 0.000
+Vivado% exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 28 03:27:51 2017...
